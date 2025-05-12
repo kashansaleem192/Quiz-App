@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body onload="nextQuestion()">
+    <div class="quiz-box">
+        <div class="header">
+            <h1>Quiz App</h1>
+             <div class="timer-box">
+             <img src="clock.png" height="24" alt="">
+             <h2 class="quiz-timer" id="timer">
+                2:0
+            </h2>
+           </div>
+        </div>
+        <div>
+          
+            <p class="question" id="ques"></p>
+            <br>
+            <div class="answer">
+                <input value="1" onclick="clicked()" id="input1" name="options" type="radio" class="option">
+                <label id="opt1" for="input1">
+                    
+                </label>
+            </div>
+            <br>
+            <br>
+            <div class="answer">
+                <input value="2" onclick="clicked()" id="input2" name="options" type="radio" class="option">
+            <label id="opt2" for="input2"></label>
+            </div>
+            <br>
+            <br>
+            <div class="answer">
+                <input value="3" onclick="clicked()" id="input3" name="options" type="radio" class="option">
+            <label id="opt3" for="input3"></label>
+            </div>
+            <br>
+            <br>
+            <button class="next-btn" id="btn" disabled onclick="nextQuestion()">Next</button>
+        </div>
+          Your Score is <h2 id="result"></div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
